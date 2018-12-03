@@ -14,8 +14,9 @@ class UserInfo(models.Model):
     def __str__(self):
         return self.name
 
-    class META:
-        __table_name__ = 'userinfo'
+    class Meta:
+        db_table = 'userinfo'   # 自定义表名
+        # verbose_name_plural = ""   # 复数名称
 
 class Course(models.Model):
     name = models.CharField(u'课程名', max_length=50)
@@ -24,8 +25,9 @@ class Course(models.Model):
     def __str__(self):
         return self.name
 
-    class META:
-        __table_name__ = 'course_name'
+    class Meta:
+        db_table = 'course_name'
+        # verbose_name_plural = ""
 
 
 
