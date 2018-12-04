@@ -1,5 +1,6 @@
 from django.db import models
 
+# -----school and student
 class UserInfo(models.Model):
     name = models.CharField(u'用户名', max_length=50)
     age = models.IntegerField(u'年龄')
@@ -16,7 +17,7 @@ class UserInfo(models.Model):
 
     class Meta:
         db_table = 'userinfo'   # 自定义表名
-        # verbose_name_plural = ""   # 复数名称
+        verbose_name_plural = ""   # 复数名称
 
 class Course(models.Model):
     name = models.CharField(u'课程名', max_length=50)
@@ -29,6 +30,50 @@ class Course(models.Model):
         db_table = 'course_name'
         # verbose_name_plural = ""
 
+# -----school and student
 
+# -----blog
+class Author(models.Model):
+    name = models.CharField(u'姓名', max_length=50)
+    age = models.IntegerField(u'年龄')
+    addr = models.CharField(u'地址', max_length=50)
+    email = models.EmailField(u'邮箱')
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        db_table = "作者信息"
+        verbose_name_plural = "作者信息"
+
+class Article(models.Model):
+    title = models.CharField(u'标题', max_length=100, null=False, blank=False)
+    content = models.TextField(u'内容', null=True, blank=True)
+    index_page = models.ImageField(u'首页图片', upload_to='static/images')
+    author = models.ForeignKey(Author, on_delete=True)
+    price = models.IntegerField(u'价格')
+    publish_date = models.DateTimeField('发布时间',auto_now_add=True)
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        db_table = '博客文章'
+        verbose_name_plural = "博客文章"
+
+
+class Publisher(models.Model):
+    name = models.CharField(u'出版商', max_length=50)
+    addr = models.CharField(u'地址', max_length=50, null=False, blank=False, unique=True)
+    article = models.ManyToManyField(Article, related_name='pa')
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        db_table = '出版商'
+        verbose_name_plural = "出版商"
+
+# -----blog
 
 

@@ -1,0 +1,18 @@
+.body-head {
+    color: #008800;
+    background: #660066;
+}
+
+.body-left {
+    color: #9a9afb;
+    background: #FFEEC2;
+    float: left;
+    width: 30%;
+}
+
+.body-right {
+    color: #d43f3a;
+    background: #ac2925;
+    float: left;
+    width: 70%;
+}
