@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block title %}
+    {% for row in author_list %}
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="courses.html" id="dropdown04" data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false">{{ row.name }}</a>
+        </li>
+    {% endfor %}
+{% endblock %}
+
+{% block author %}
+    {% for row in author_list %}
+        <div class="media d-block feature text-center">
+            <img src="/static/images/{{ row.name_en}}.jpg" alt="Image placeholder" class="mb-3">
+            <div class="media-body">
+                <h3 class="mt-0">{{ row.name }}</h3>
+                <p class="instructor-meta">WordPress Expert</p>
+                <p>{{ row.brief | truncatechars:50}}</p>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
+
+{% block author_bottom %}
+    {% for row in author_list %}
+    <div class="media d-block feature text-center">
+        <img src="/static/images/{{ row.name_en }}.jpg" alt="Image placeholder" class="mb-3">
+        <div class="media-body">
+            <h3 class="mt-0">{{ row.name }}</h3>
+            <p class="instructor-meta">WordPress Expert</p>
+            <p>{{ row.brief | truncatechars:50 }}</p>
+        </div>
+    </div>
+    {% endfor %}
+{% endblock %}
+
+{% block article %}
+    {% for row in  article_list%}
+    <div class="col-md-4 col-sm-6 col-12">
+        <a href="blog-single.html" class="blog-entry">
+            <img src="/static/images/img_1.jpg" alt="Image placeholder">
+            <h2>{{ row.title}}</h2>
+            <p>{{ row.content | truncatechars:100 }}</p>
+            <p>{{ row.publish_date | date:"Y-m-d H:i:s"  }}</p>
+        </a>
+    </div>
+    {% endfor %}
+{% endblock %}

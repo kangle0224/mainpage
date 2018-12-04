@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/css/animate.css">
+    <link rel="stylesheet" href="/static/css/owl.carousel.min.css">
+
+    <link rel="stylesheet" href="/static/fonts/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="/static/fonts/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/fonts/flaticon/font/flaticon.css">
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<header role="banner">
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-light">
+        <div class="container">
+            <a class="navbar-brand absolute" href="index.html">Skwela</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05"
+                    aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse navbar-light" id="navbarsExample05">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    {% block title %}
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="courses.html" id="dropdown04"
+                               data-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false"></a>
+                        </li>
+                    {% endblock %}
+                </ul>
+                <ul class="navbar-nav absolute-right">
+                    <li class="nav-item">
+                        <a href="login.html" class="nav-link">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="register.html" class="nav-link">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- END header -->
+
+<!-- END section -->
+
+
+
+<!-- END section -->
+
+<section class="site-section">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-7 text-center">
+                <p class="lead">中国古代诗人</p>
+            </div>
+        </div>
+
+        <section class="school-features text-dark d-flex">
+
+            <div class="inner">
+                {% block author %}
+                <div class="media d-block feature text-center">
+                    <img src="images/person_1.jpg" alt="Image placeholder" class="mb-3">
+                    <div class="media-body">
+                        <h3 class="mt-0">Rhea Smith</h3>
+                        <p class="instructor-meta">WordPress Expert</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora fuga suscipit numquam esse
+                            saepe quam, eveniet iure assumenda dignissimos aliquam!</p>
+                    </div>
+                </div>
+                {% endblock %}
+            </div>
+
+
+        </section>
+        <section class="school-features text-dark last d-flex">
+
+            <div class="inner">
+                {% block author_bottom%}
+                <div class="media d-block feature text-center">
+                    <img src="images/person_1.jpg" alt="Image placeholder" class="mb-3">
+                    <div class="media-body">
+                        <h3 class="mt-0">Rhea Smith</h3>
+                        <p class="instructor-meta">WordPress Expert</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora fuga suscipit numquam esse
+                            saepe quam, eveniet iure assumenda dignissimos aliquam!</p>
+                    </div>
+                </div>
+                {% endblock %}
+            </div>
+
+
+        </section>
+
+
+    </div>
+</section>
+<section class="site-section bg-light">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-7 text-center">
+                <h2>古诗</h2>
+                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum magnam illum maiores
+                    adipisci pariatur, eveniet.</p>
+            </div>
+        </div>
+        <div class="row blog-entries">
+            {% block article %}
+            <div class="col-md-4 col-sm-6 col-12">
+                <a href="blog-single.html" class="blog-entry">
+                    <img src="/static/images/img_1.jpg" alt="Image placeholder">
+                    <h2>College vs. ELearning</h2>
+                    <p>January 3, 2018</p>
+                </a>
+            </div>
+            {% endblock %}
+        </div>
+
+    </div>
+    </div>
+</section>
+<!-- END section -->
+
+
+<footer class="site-footer" style="background-image: url(/static/images/big_image_3.jpg);">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-md-4">
+                <h3>About</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, accusantium optio unde perferendis
+                    eum illum voluptatibus dolore tempora, consequatur minus asperiores temporibus reprehenderit.</p>
+            </div>
+            <div class="col-md-6 ml-auto">
+                <div class="row">
+                    <div class="col-md-4">
+                        <ul class="list-unstyled">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Company</a></li>
+                            <li><a href="#">Teachers</a></li>
+                            <li><a href="#">Courses</a></li>
+                            <li><a href="#">Categories</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <ul class="list-unstyled">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Company</a></li>
+                            <li><a href="#">Teachers</a></li>
+                            <li><a href="#">Courses</a></li>
+                            <li><a href="#">Categories</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <ul class="list-unstyled">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Company</a></li>
+                            <li><a href="#">Teachers</a></li>
+                            <li><a href="#">Courses</a></li>
+                            <li><a href="#">Categories</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p>
+                    Copyright &copy; 2018.Company name All rights reserved.<a target="_blank"
+                                                                              href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- END footer -->
+
+<!-- loader -->
+<div id="loader" class="show fullscreen">
+</div>
+
+<script src="/static/js/jquery-3.2.1.min.js"></script>
+<script src="/static/js/jquery-migrate-3.0.0.js"></script>
+<script src="/static/js/popper.min.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+<script src="/static/js/owl.carousel.min.js"></script>
+<script src="/static/js/jquery.waypoints.min.js"></script>
+<script src="/static/js/jquery.stellar.min.js"></script>
+
+
+<script src="/static/js/main.js"></script>
+</body>
+</html>

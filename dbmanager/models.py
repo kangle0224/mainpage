@@ -35,9 +35,11 @@ class Course(models.Model):
 # -----blog
 class Author(models.Model):
     name = models.CharField(u'姓名', max_length=50)
+    name_en = models.CharField(u"英文名", max_length=50)
     age = models.IntegerField(u'年龄')
     addr = models.CharField(u'地址', max_length=50)
     email = models.EmailField(u'邮箱')
+    brief = models.TextField(u'简介', null=True)
 
     def __str__(self):
         return self.name
@@ -49,7 +51,7 @@ class Author(models.Model):
 class Article(models.Model):
     title = models.CharField(u'标题', max_length=100, null=False, blank=False)
     content = models.TextField(u'内容', null=True, blank=True)
-    index_page = models.ImageField(u'首页图片', upload_to='static/images')
+    index_page = models.ImageField(u'首页图片', upload_to='static/images', null=True, blank=True)
     author = models.ForeignKey(Author, on_delete=True)
     price = models.IntegerField(u'价格')
     publish_date = models.DateTimeField('发布时间',auto_now_add=True)
@@ -66,6 +68,7 @@ class Publisher(models.Model):
     name = models.CharField(u'出版商', max_length=50)
     addr = models.CharField(u'地址', max_length=50, null=False, blank=False, unique=True)
     article = models.ManyToManyField(Article, related_name='pa')
+    brief = models.TextField(u'朝代简介')
 
     def __str__(self):
         return self.name
